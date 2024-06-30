@@ -1,0 +1,249 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+header{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: orange;
+  border-radius: 10px;
+  text-align: center;
+}
+h4{
+  color: rgb(176, 25, 136);
+}
+.red{
+  color: red;
+}
+span{
+  color: green;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to right top,
+    #331fbb,
+    #1c2199,
+    #0d1f78,
+    #0c1a56,
+    #0e1435,
+    #151834,
+    #1a1c32,
+    #1f2031,
+    #30314f,
+    #424470,
+    #555792,
+    #6a6ab5
+  );
+  overflow: hidden;
+}
+
+.container {
+  width: 40em;
+  height: 40em;
+  position: relative;
+  font-size: 7px;
+}
+
+img {
+  height: 130%;
+  width: 130%;
+}
+
+.sun {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  top: 15em;
+  left: 15em;
+  border-radius: 50%;
+  box-shadow: 0 0 3em rgb(255, 128, 0);
+  animation: orbit 50s linear infinite;
+}
+
+.planet {
+  position: absolute;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+  border-width: 0.3em 0.2em 0 0;
+  border-radius: 50%;
+}
+
+.planet::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  animation: orbit 30s linear infinite;
+}
+
+.mercury::before {
+  background-image: url("images/mercury.png");
+  background-size: cover;
+  top: 1.5em;
+  right: 0.8em;
+  width: 2em;
+  height: 2em;
+}
+
+.mercury {
+  top: 12.5em;
+  left: 12.5em;
+  width: 15em;
+  height: 15em;
+  animation: orbit 68.7s linear infinite;
+}
+.venus::before {
+  top: 2em;
+  right: 2em;
+  width: 2em;
+  height: 2em;
+  background-image: url("images/venus.png");
+  background-size: cover;
+}
+.venus {
+  top: 10em;
+  left: 10em;
+  width: 20em;
+  height: 20em;
+  animation: orbit 48.7s linear infinite;
+}
+.earth::before {
+  top: 3em;
+  right: 0em;
+  width: 5em;
+  height: 5em;
+  background-image: url("images/earth.png");
+  background-size: cover;
+}
+.earth {
+  top: 6em;
+  left: 6em;
+  width: 28em;
+  height: 28em;
+  animation: orbit 36.5s linear infinite;
+}
+.moon::before {
+  top: 0.8em;
+  right: 0.2em;
+  width: 1.2em;
+  height: 1.2em;
+  background-image: url("images/moon.png");
+  background-size: cover;
+}
+.moon {
+  top: 2em;
+  right: -1em;
+  width: 7em;
+  height: 7em;
+
+  animation: orbit 2.7s linear infinite;
+}
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  z-index: -1;
+}
+.mars::before {
+  top: 5em;
+  right: 2em;
+  width: 4em;
+  height: 4em;
+  background-image: url("images/mars.png");
+  background-size: cover;
+}
+.mars{
+    top: 1em;
+  left: 2em;
+  width: 38em;
+  height: 38em;
+  animation: orbit 34.5s linear infinite;
+}
+.jupiter::before {
+  top: 6em;
+  right: 3em;
+  width: 4em;
+  height: 4em;
+  background-image: url("images/jupiter.png");
+  background-size: cover;
+}
+.jupiter{
+    top: -2em;
+  left: -2em;
+  width: 47em;
+  height: 47em;
+  animation: orbit 32.5s linear infinite;
+}
+.seturn::before {
+  top: 8em;
+  right: 5em;
+  width: 4em;
+  height: 4em;
+  background-image: url("images/saturn.png");
+  background-size: cover;
+}
+.seturn{
+    top: -6em;
+  left: -6em;
+  width: 56em;
+  height: 56em;
+  animation: orbit 30s linear infinite;
+}
+.uranus::before {
+  top: 10em;
+  right: 6em;
+  width: 4em;
+  height: 4em;
+  background-image: url("images/uranus.png");
+  background-size: cover;
+}
+.uranus{
+    top: -9em;
+  left: -9em;
+  width: 66em;
+  height: 66em;
+  animation: orbit 28.5s linear infinite;
+}
+.neptune::before {
+  top: 11em;
+  right: 6em;
+  width: 4em;
+  height: 4em;
+  background-image: url("images/neptune.png");
+  background-size: cover;
+}
+.neptune{
+    top: -11em;
+  left: -11em;
+  width: 72em;
+  height: 72em;
+  animation: orbit 30.5s linear infinite;
+}
+.pluto::before {
+  top: 14em;
+  right: 6.5em;
+  width: 4em;
+  height: 4em;
+  background-image: url("images/pluto.png");
+  background-size: cover;
+}
+.pluto{
+    top: -13em;
+  left: -14em;
+  width: 80em;
+  height: 80em;
+  animation: orbit 25.5s linear infinite;
+}
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
